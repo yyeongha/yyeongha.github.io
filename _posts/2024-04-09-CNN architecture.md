@@ -1,5 +1,14 @@
 ---
 title: CNN architecture
+categories: [CNN] # [메인 카테고리, 서브 카테고리]
+tags:
+  - [CNN]
+
+toc: true
+toc_sticky: true
+
+date: 2024-04-09
+# last_modified_at: 2024-04-09
 ---
 Alexnet Architecture
 * Convolutoion layer 5개 + fully connected layer 3개
