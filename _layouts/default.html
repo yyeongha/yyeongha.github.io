@@ -16,10 +16,6 @@ layout: compress
 <html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
 
-  /* mathjax 추가 */
-  {% if page.use_math %}
-    {% include mathjax_support.html %}
-  {% endif %}
 
   <body>
     {% include sidebar.html lang=lang %}
