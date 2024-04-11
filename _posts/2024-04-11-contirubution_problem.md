@@ -1,7 +1,7 @@
 ---
-title: [github] 
+title: [github] fork 해온 repository 잔디 안심김(?) 오류 해결
 ---
-jekyll-chrisp fork 해온 repository 잔디 심는 방법
+# 😅 
 
-# 😅 jekyll-chrisp fork 
+
 ---
