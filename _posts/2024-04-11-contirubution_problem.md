@@ -49,12 +49,12 @@ https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-pers
 #### 2-2-2. Git에서 커밋 이메일 주소 설정
 * Git Bash를 연다.
 * Git에서 이메일 주소를 설정한다.
-```linux
+```
 git config --global user.email "YOUR_EMAIL"
 ```
 
 * Git에서 이메일 주소를 올바르게 설정했는지 확인한다
-```linux
+```
 $ git config --global user.email
 email@example.com
 ```
