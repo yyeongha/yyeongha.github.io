@@ -1,4 +1,4 @@
 ---
-title: [논문구현] AlexNet 
+title: \[논문구현\] AlexNet 
 ---
 ---
