@@ -1,5 +1,5 @@
 ---
-title: \[Docker\] Container 예제 (nginx)
+title: \[Docker\] 컨테이너 예제 (nginx)
 ---
 ## 단계1. 도커 이미지 조회
 

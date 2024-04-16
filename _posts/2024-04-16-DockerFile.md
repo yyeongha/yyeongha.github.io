@@ -34,7 +34,7 @@ EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
 ```
 
-![Dockerfile]](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/Dockerfile.png?raw=true)
+![Dockerfile](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/Dockerfile.png?raw=true)
 
 
 ## Dockerfile build
@@ -42,6 +42,18 @@ CMD ["apachectl", "-D", "FOREGROUND"]
 docker build -t apache-image
 ```
 
-![]()
+![DockerfileBuild](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/DockerfileBuild.png?raw=true)
+
+
+## Container 생성
+```
+docker run -d -p 80:80 --name apache-container apache-image
+```
+
+![GenerateContainer](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/GenerateContainer.png?raw=true)
+
+![localhost](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/localhost.png?raw=true)
+
+![localhost2](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/localhost2.png?raw=true)
 
 ---
