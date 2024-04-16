@@ -108,7 +108,14 @@ docker ps -a
 docker rmi nginx
 ```
 
-![]()
+![RmiNginx](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/RmiNginx.png?raw=true)
+
+## 단계13. nginx 이미지 삭제 확인
+```
+docker image ls
+```
+
+![imagels](https://github.com/good593/course_dev_basic/raw/main/docker/samples/1.%20%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%98%88%EC%A0%9C/img/image-13.png)
 
 
 
