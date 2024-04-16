@@ -80,9 +80,35 @@ docker ps
 ## 단계9. nginx 서버 접속 불가
 * http://localhost:80/
 
+![NoLocal](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/NoLocal.png?raw=true)
+
+
+## 단계10. 중지된 nginx 컨테이너 확인
+```
+docker ps -a
+```
+
+![DockerPs](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/DockerPs-a.png?raw=true)
+
+
+## 단계11. 중지된 nginx 컨테이너 삭제
+* docker rm <컨테이너 이름>
+
+```
+docker rm web-server
+docker ps -a
+```
+
+![RmWeb](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-docker/RmWeb.png?raw=true)
+
+## 단계12. nginx 이미지 삭제
+* docker rmi <이미지 이름>
+
+```
+docker rmi nginx
+```
+
 ![]()
-
-
 
 
 
