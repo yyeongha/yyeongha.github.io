@@ -78,8 +78,38 @@ docker ps -a
 ## 단계10. 도커허브 -> repositories -> 아이디 확인
 * 도커허브 :  https://hub.docker.com/
 
-![]()
+![DockesrHubRepoId](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-DockerImg/DockesrHubRepoId.png?raw=true)
 
+## 단계11. 도커 로그인
+```
+docker login
+```
+
+![DockerLogin](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-DockerImg/DockerLogin.png?raw=true)
+
+
+## 단계12. 도커허브아아디/ 이미지명
+* docker tag <이미지명>:<태그> <도커허브아이디>/<이미지명>:<태그>
+
+```
+docker tag hellojs:latest goodwon593/hellojs:latest
+docker image ls # 생성된 이미지 확인 
+```
+
+![DockerhubIDImgName](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-DockerImg/DockerhubIDImgName.png?raw=true)
+
+
+## 도커허브로 이미지 업로드
+* docker push <도커허브아이디>/<이미지명>:<태그>
+
+```
+docker push yeongha/hellojs
+```
+
+![UploadImgToDockerhub](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-DockerImg/UploadImgToDockerhub.png?raw=true)
+
+## 단계14. 도커허브에서 이미지 업로드 확인
+![CheckUploadedImg](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-16-DockerImg/CheckUploadedImg.png?raw=true) 
 
 
 ---
