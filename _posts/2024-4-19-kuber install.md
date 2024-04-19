@@ -118,19 +118,42 @@ sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
 ```
 
-![]()
+![kubeadm, kubelet and kubectl 설치1.png](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/kubeadm,%20kubelet%20and%20kubectl%20%EC%84%A4%EC%B9%981.png?raw=true)
+
+![kubeadm, kubelet and kubectl 설치2](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/kubeadm,%20kubelet%20and%20kubectl%20%EC%84%A4%EC%B9%982.png?raw=true)
 
 
+* Download the public signing key for the kubernetes package repositories
+```
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.27/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+```
+
+![kubeadm, kubelet and kubectl 설치3](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/kubeadm,%20kubelet%20and%20kubectl%20%EC%84%A4%EC%B9%983.png?raw=true)
 
 
+* add the appropriate kubernetes apt repository
+```
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.27/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+```
+
+![kubeadm, kubelet and kubectl 설치4](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/kubeadm,%20kubelet%20and%20kubectl%20%EC%84%A4%EC%B9%984.png?raw=true)
 
 
+* update the apt package index and check version
+```
+sudo apt-get update
+apt-cache madison kubeadm # 설치가능버전 확인 
+```
 
+![kubeadm, kubelet and kubectl 설치5](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/kubeadm,%20kubelet%20and%20kubectl%20%EC%84%A4%EC%B9%985.png?raw=true)
 
+![kubeadm, kubelet and kubectl 설치6](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/kubeadm,%20kubelet%20and%20kubectl%20%EC%84%A4%EC%B9%986.png?raw=true)
 
-
-
-
-
+* 설치가능버전으로 변경 후 설치
+```
+sudo apt-get install -y kubelet=1.27.10-1.1 kubeadm=1.27.10-1.1 kubectl=1.27.10-1.1
+```
+![kubeadm, kubelet and kubectl 설치7](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/kubeadm,%20kubelet%20and%20kubectl%20%EC%84%A4%EC%B9%987.png?raw=true)
 
 ---
