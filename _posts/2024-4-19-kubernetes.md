@@ -86,6 +86,7 @@ ifconfig
 
 ![Checkmasterip](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-4-19-kubernetes/Checkmasterip.png?raw=true)
 
+
 ## 단계8. xshell의 세션 생성
 * 이름: master
 * 호스트: master ip (ifconfig해서 나온 inet 입력)
