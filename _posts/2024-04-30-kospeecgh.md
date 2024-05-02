@@ -1,5 +1,5 @@
 ---
-title: # [kospeech] Open-source toolkit for end-to-end Korean speech recognition 논문 리뷰
+title: [kospeech] Open-source toolkit for end-to-end Korean speech recognition 논문 리뷰
 ---
 
 논문 링크 : https://www.sciencedirect.com/science/article/pii/S2665963821000026
