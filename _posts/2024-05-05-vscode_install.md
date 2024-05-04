@@ -30,7 +30,7 @@ RemoteSigned 상태로 변경되어 있어야 한다.
 ![powershell](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-04-python_install/powershell.png?raw=true)
 
 
-## vscode IDE
+## 2. vscode IDE
 ### 1. vscode 설치
 
 https://code.visualstudio.com/download
@@ -55,16 +55,31 @@ html css support
 live server
 postman
 
-![]()
-![]()
-![]()
-![]()
+![auto](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/auto.png?raw=true)
+![git graph](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/git%20graph.png?raw=true)
+![htmlcss](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/htmlcss.png?raw=true)
+![indent](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/indent.png?raw=true)
+![jupyter](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/jupyter.png?raw=true)
+![liveserver](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/liveserver.png?raw=true)
+![postman](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/postman.png?raw=true)
+![py](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/py.png?raw=true)
+![spring](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/spring.png?raw=true)
+
+
+## 3. 개발 폰트 설치
+### D2 Coding 글꼴 다운로드
+
+https://github.com/naver/d2codingfont
+
+
+![d2codingfont]()
 ![]()
 ![]()
 ![]()
 
-
-
+![]()
+![]()
+![]()
 
 
 
