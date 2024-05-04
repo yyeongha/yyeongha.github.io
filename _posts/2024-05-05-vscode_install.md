@@ -69,17 +69,34 @@ postman
 ## 3. 개발 폰트 설치
 ### D2 Coding 글꼴 다운로드
 
+* 맨 밑 D2Coding-Ver1.3.2 들어가기
+
 https://github.com/naver/d2codingfont
 
+![d2codingfont](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/d2codingfont.png?raw=true)
 
-![d2codingfont]()
-![]()
-![]()
-![]()
+* 다운로드
 
-![]()
-![]()
-![]()
+![d2codingfont2](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/d2codingfont2.png?raw=true)
+
+* vscode에 글꼴 적용
+file -> preference -> settings
+
+![d2codingfont5](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/d2codingfont5.png?raw=true)
+
+* font 검색 -> Font Family에 D2Coding ligature 넣기
+```
+D2Coding ligature
+```
+
+![d2codingfont6](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/d2codingfont6.png?raw=true)
+
+* Font Ligatures에서 Edit in settings.json 클릭
+
+![d2codingfont7](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/d2codingfont7.png?raw=true)
+
+* settings.json에서 editer.fontfamily, editer.fontLigatures 확인
+![d2codingfont9](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-05-05-vscode_install/d2codingfont9.png?raw=true)
 
 
 
