@@ -13,7 +13,7 @@ title: [kospeech] Open-source toolkit for end-to-end Korean speech recognition �
 
 
 ## 1. Introduction
- 전통적인 자동 음성 인식(Automatic Speech Recognition, ASR) 시스템은 음향 모델, 어휘 사전 및 언어 모델을 포함합니다. 이러한 매우 복잡한 구조는 단일 디코딩 네트워크를 구축하는 데 사용됩니다.
+전통적인 자동 음성 인식(Automatic Speech Recognition, ASR) 시스템은 음향 모델, 어휘 사전 및 언어 모델을 포함합니다. 이러한 매우 복잡한 구조는 단일 디코딩 네트워크를 구축하는 데 사용됩니다.
  반대로 end-to-end ASR 시스템은 많은 장점을 가지고 있습니다. 우선 위에 작성된 모든 프로세스를 하나의 시스템으로 관리하기 때문에 훨씬 편리합니다. 그래서 deep speech 2, Listen, Attend and Spell (LAS), Transformer, RNN-Transducer 및 Joint CTC-Attenetion LAS 등 많은 end-to-end 모델이 제안되었습니다.
  도메인 지식 없이도 접근할 수 있을 정도로 간단하고 모델 구조가 명확하고 간결하기 때문에 더 직관적입니다. ASR의 다양한 구현이 그렇게 공개됩니다. 그러나 LibriSpeech, WSJ, Switchboard, CallHome과 같은 이러한 오픈 소스의 대부분은 영어와 같은 비한국어를 다루고 있습니다. 한국어 ASR 오픈 소스의 부재는 한국어 음성 인식의 진입 장벽을 높이는 주요 요인 중 하나가 되었습니다.
  따라서 지금까지 출시된 한국어 음성 데이터 세트 중 가장 큰 KsponSpeech를 처리할 수 있는 툴킷인 Kospeech를 열기로 결정했습니다. KsponSpeech는 1000시간 분량의 음성 데이터 전사 쌍으로 구성되어 있습니다. 
