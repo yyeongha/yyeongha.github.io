@@ -49,11 +49,10 @@ wsl --set-default-version 2
 ![ubuntu22.04]()
 
 
-![]()
-![]()
-![]()
-![]()
+# 4. update, upgrade
+```
+sudo apt update
+sudo apt upgrade
 
-
-
+```
 ---
