@@ -1,5 +1,7 @@
 ---
 title: wsl을 이용하여 ubuntu 설치하기
+date: 2024-05-11
+last_modified_at: 2024-05-26
 ---
 나는 원래 있었던 ubuntu20.04를 삭제하고 ubuntu 22.04를 설치하고 싶기 때문에 기존에 있던 wsl과 ubuntu를 삭제한다.
 
@@ -40,7 +42,9 @@ wsl --set-default-version 2
 
 
 # 3. Ubuntu22.04 설치
-## microsoft store에서 Ubuntu22.04 설치
+Ubuntu22.04를 설치하는 방법은 총 두가지가 있다.
+
+## 1) microsoft store에서 Ubuntu22.04 설치
 ![microsoft store]()
 
 ## Ubuntu22.04 실행
@@ -48,11 +52,27 @@ wsl --set-default-version 2
 
 ![ubuntu22.04]()
 
+## 2) 
+## (1) window powershell 관리자 권한 실행
+wsl에 설치 가능한 리눅스 배포판 검색
+```
+wsl -l -o
+```
+
+![wsllist]()
+
+## (2) 원하는 배포판 설치
+나는 Ubuntu22.04 설치
+```
+wsl --install -d Ubuntu-22.04
+```
+
+![ubuntu2204]()
+
 
 # 4. update, upgrade
 ```
 sudo apt update
 sudo apt upgrade
-
 ```
 ---
