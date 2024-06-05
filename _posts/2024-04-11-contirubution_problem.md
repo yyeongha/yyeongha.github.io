@@ -1,5 +1,5 @@
 ---
-title: \[github\] fork 해온 repository 잔디 안심김(?) 오류 해결
+title: github_fork 해온 repository 잔디 안심김(?) 오류 해결
 ---
 # 😿 잔디가 안심어져요...
 jekyll-chrisp를 fork해서 블로그를 만들고 몇일동안 글을 commit했는데 contribution에 뜨지 않았다.
