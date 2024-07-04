@@ -5,11 +5,24 @@ date: 2024-07-04
 last_modified_at: 2024-07-04
 ---
 
-# 1. 데이터 설명
+# 1. 문제 정의 및 데이터 탐색
+
+## 1) 문제 정의
+* 목표 : 제공된 수질 관련 특징들을 기반으로 음용 가능 여부(Potable/Not potable)를 분류하는 모델 개발
+* 데이터 : 'water_potability.csv' 파일 사용
+* 특징: pH, 경도, 고형물(TDS), 클로라민, 황산염, 전도도, 유기 탄소, 트리할로메탄, 탁도
+* 타겟 변수: Potability (1: 음용 가능, 0: 음용 불가)
+* 데이터 탐색 결과:
+    * 특징 데이터 타입: 대부분 float64 (실수형), Potability는 int64 (정수형)
+    * 결측값: ph, Sulfate, Trihalomethanes 열에 존재
+    * 불균형: Potability 값이 0인 데이터가 더 많음
+    * 통계 분석: Potability 값에 따른 각 특징의 평균 및 표준편차 비교
+    * 이상치: 다수 존재
+
 ![waterQuality]()
 ![waterQuality_exel]()
 
-## 1) 특징 세부 정보
+## 2) 특징 세부 정보
 (1) pH value:
 * pH는 물의 산-염기 균형을 평가하는 중요한 매개변수이다. 또한 물 상태의 산성 또는 알칼리성 상태를 나타내는 지표이다.
 * WHO는 6.5에서 8.5 사이의 최대 허용 pH 한도를 권장한다.
@@ -65,7 +78,59 @@ last_modified_at: 2024-07-04
 * 0은 음용 불가(Not potable)를 의미
 
 
+# 2. 데이터 전처리
+* 데이터 타입 변환: Potability를 category 타입으로 변환
+```
+df.info()
+```
+![dfinfo]()
+위 정보를 보면 목표 특징을 제외하고 다른 특징들은 float(실수)이며 연속적인 값을 가진다. Potability 특징은 범주형 특징으로 변환할 수 있다.
+```
+df['Potability']=df['Potability'].astype('category')
+```
 
+* 결측값 처리: Potability 값에 따른 각 특징의 평균값으로 대체
+```
+df.isnull().sum()
+```
+![isnullsum]()
+위 결과를 보면 ph, Sulfate 및 Trihalomethanes에 null 값이 있다. 이 값들을 자세히 확인하고 처리하는 과정을 다음과 같이 나타낸다.
+
+```
+df[df['Sulfate'].isnull()]
+df[df['ph'].isnull()]
+df[df['Trihalomethanes'].isnull()]
+```
+![isnull]()
+위 데이터프레임을 보면 결측값이 두 클래스(Potability 1 & 0) 모두에 존재하므로, 전체 모집단 평균으로 대체할 수 있다. 따라서, 각 클래스의 표본 평균을 기반으로 NaN 값을 대체한다.
+
+```
+#Replace null values based on the group/sample mean
+
+# Potability 그룹별로 ph 열의 평균을 계산하고, 결측값(NaN)을 해당 그룹의 평균 값으로 채움
+df['ph']=df['ph'].fillna(df.groupby(['Potability'])['ph'].transform('mean'))
+
+# Potability 그룹별로 Sulfate 열의 평균을 계산하고, 결측값(NaN)을 해당 그룹의 평균 값으로 채움
+df['Sulfate']=df['Sulfate'].fillna(df.groupby(['Potability'])['Sulfate'].transform('mean'))
+
+# Potability 그룹별로 Trihalomethanes 열의 평균을 계산하고, 결측값(NaN)을 해당 그룹의 평균 값으로 채움
+df['Trihalomethanes']=df['Trihalomethanes'].fillna(df.groupby(['Potability'])['Trihalomethanes'].transform('mean'))
+```
+```
+df.isna().sum()
+```
+![isnull2]()
+
+
+# 3. 탐색적 데이터 분석 (EDA)
+* 시각화:
+    * Potability 값 분포: 목표변수에 불균형이 존재한다. 이는 모델링 시 고려해야한다.
+    ![patabilityFeature]()
+    * 특징 분포: Potability 값에 따른 각 특징의 분포 비교, 승인 기준과의 비교
+    * 상관관계 분석: 특징 간의 상관관계 확인 (선형 모델 적합성 판단)
+    * PCA: 주성분 분석을 통한 차원 축소 효과 확인 (차원 축소 효과 미미)
+* 통계 분석:
+    * t-검정: Potability 값에 따른 각 특징의 평균 차이 유의성 검정 (Solids, Organic_carbon 특징에서 유의미한 차이 발견)
 
 
 
