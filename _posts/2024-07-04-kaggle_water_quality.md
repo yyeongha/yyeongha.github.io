@@ -19,8 +19,8 @@ last_modified_at: 2024-07-04
     * 통계 분석: Potability 값에 따른 각 특징의 평균 및 표준편차 비교
     * 이상치: 다수 존재
 
-![waterQuality]()
-![waterQuality_exel]()
+![waterQuality](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-07-04-kaggle/waterQuality.png?raw=true)
+![waterQuality_exel](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-07-04-kaggle/waterQuality_exel.png?raw=true)
 
 ## 2) 특징 세부 정보
 (1) pH value:
@@ -83,7 +83,7 @@ last_modified_at: 2024-07-04
 ```
 df.info()
 ```
-![dfinfo]()
+![dfinfo](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-07-04-kaggle/dfinfo.png?raw=true)
 위 정보를 보면 목표 특징을 제외하고 다른 특징들은 float(실수)이며 연속적인 값을 가진다. Potability 특징은 범주형 특징으로 변환할 수 있다.
 ```
 df['Potability']=df['Potability'].astype('category')
@@ -93,7 +93,7 @@ df['Potability']=df['Potability'].astype('category')
 ```
 df.isnull().sum()
 ```
-![isnullsum]()
+![isnullsum](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-07-04-kaggle/isnullsum.png?raw=true)
 위 결과를 보면 ph, Sulfate 및 Trihalomethanes에 null 값이 있다. 이 값들을 자세히 확인하고 처리하는 과정을 다음과 같이 나타낸다.
 
 ```
@@ -101,7 +101,7 @@ df[df['Sulfate'].isnull()]
 df[df['ph'].isnull()]
 df[df['Trihalomethanes'].isnull()]
 ```
-![isnull]()
+![isnull](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-07-04-kaggle/isnull.png?raw=true)
 위 데이터프레임을 보면 결측값이 두 클래스(Potability 1 & 0) 모두에 존재하므로, 전체 모집단 평균으로 대체할 수 있다. 따라서, 각 클래스의 표본 평균을 기반으로 NaN 값을 대체한다.
 
 ```
@@ -119,13 +119,13 @@ df['Trihalomethanes']=df['Trihalomethanes'].fillna(df.groupby(['Potability'])['T
 ```
 df.isna().sum()
 ```
-![isnull2]()
+![isnull2](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-07-04-kaggle/isnull2.png?raw=true)
 
 
 # 3. 탐색적 데이터 분석 (EDA)
 * 시각화:
     * Potability 값 분포: 목표변수에 불균형이 존재한다. 이는 모델링 시 고려해야한다.
-    ![patabilityFeature]()
+    ![patabilityFeature](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-07-04-kaggle/patabilityFeature.png?raw=true)
     * 특징 분포: Potability 값에 따른 각 특징의 분포 비교, 승인 기준과의 비교
     * 상관관계 분석: 특징 간의 상관관계 확인 (선형 모델 적합성 판단)
     * PCA: 주성분 분석을 통한 차원 축소 효과 확인 (차원 축소 효과 미미)
