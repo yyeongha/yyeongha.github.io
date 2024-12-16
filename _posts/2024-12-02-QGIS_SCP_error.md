@@ -46,11 +46,11 @@ Semi-Automatic Classification Plugin은 대부분의 기능에 Remotior Sensus, 
 ![qgisshell](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-12-02-QGIS/qgisshell.png?raw=true)
 
 * 다음 명령어를 입력
-```python
+```
 pip3 install --upgrade remotior-sensus
 ```
 * 또는 머신러닝기능이 필요할 경우 해당 명령어를 입력
-```python
+```
 pip3 install --upgrade remotior-sensus scikit-learn torch
 ```
 
