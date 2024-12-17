@@ -32,7 +32,7 @@ pip install packaging
 공식문서에서는 모든 종속성을 설치할 수 있는 경우 pip로 설치가능하다고 나와있다.
 공식문서에서 말하는 종속성은 
 
-![Dependencies]()
+![Dependencies](https://github.com/yyeongha/yyeongha.github.io/blob/main/assets/img/favicons/2024-12-16-install_geopandas/Dependencies.png?raw=true)
 
 해당 종속성들이 있다. 그 중 필수 종속성에 대해서만 설치를 해준다.
 
